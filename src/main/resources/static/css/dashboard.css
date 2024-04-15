@@ -1,0 +1,130 @@
+       body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+  }
+
+  header {
+      background-color: #AA336A;
+      color: white;
+      text-align: center;
+      padding: 10px;
+  }
+
+  nav {
+      text-align: center;
+      padding: 10px;
+  }
+
+  nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 2px 10px;
+      border: 1px solid white;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+      display: inline-block;
+  }
+
+  nav a:hover {
+      background-color: #007bff;
+      color: white;
+  }
+
+  footer {
+      background-color: #AA336A;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      bottom: 0;
+      width: 100%;
+  }
+
+  .dashboard-container {
+      max-width: 100%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  .dashboard-content {
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      margin-bottom: 20px;
+  }
+
+  .dashboard-content h2 {
+      color: #007bff;
+  }
+
+  .dashboard-content h4 {
+      margin-top: 20px;
+      color: #6c757d;
+  }
+
+  .dashboard-content i {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #007bff;
+  }
+
+  /* Animation */
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+
+  .animated {
+      animation: fadeIn 1s ease-out;
+  }
+
+  nav a.dashboard-button,
+nav a.fas.fa-sign-out {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; /* Reduced margin for smaller spacing */
+    font-weight: bold;
+    padding: 8px 16px; /* Smaller padding for a smaller button */
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    font-size: 14px; /* Adjusted font size */
+    opacity: 0; /* Start with opacity 0 for the fade-in animation */
+}
+
+nav a.dashboard-button:hover,
+nav a.fas.fa-sign-out:hover {
+    background-color: white;
+    color: #007bff;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Slide up slightly during fade-in */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Slide back down to normal position */
+    }
+}
+
+/* Apply animation to all links */
+nav a {
+    animation: fadeIn 0.5s ease-out;
+    animation-fill-mode: forwards; /* Keep the final state after animation */
+}

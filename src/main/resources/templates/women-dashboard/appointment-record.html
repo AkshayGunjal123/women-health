@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+    <title>Appointment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<div  th:fragment="appointment-record" class="container">
+
+    <h2>Appointment Details</h2>
+    <div th:if="${appointments != null}">
+
+        <div class="table-responsive">
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+
+                    <th>Appointment Date</th>
+                    <th>Doctor Name</th>
+                    <th>Hospital</th>
+                    <th>Appointment Time</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+
+                    <td th:text="${appointments.appointmentDate}"></td>
+                    <td th:text="${appointments.doctorName}"></td>
+                    <td th:text="${appointments.hospital}"></td>
+                    <td th:text="${appointments.appointmentTime}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </div>
+    <div th:if="${appointments == null}">
+        <p>No appointment found.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

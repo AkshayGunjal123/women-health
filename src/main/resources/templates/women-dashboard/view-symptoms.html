@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Symptoms</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Add any additional CSS styling as needed -->
+    <script th:src="@{/js/javascript.js}"></script>
+
+</head>
+<body>
+
+<div th:fragment="view-symptoms" class="container">
+    <h2>View Symptoms</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Email</th>
+                <th>All Symptoms</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:if="${symptomsData == null}">
+                <td colspan="2">No symptoms found</td>
+            </tr>
+            <tr th:if="${symptomsData != null}">
+                <td th:text="${symptomsData.email}"></td>
+                <td th:text="${symptomsData.allSymptoms}"></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+</body>
+</html>

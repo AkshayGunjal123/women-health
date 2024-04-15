@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symptoms</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div th:fragment="women-symptoms" class="container">
+  <h2>Symptom Checker</h2>
+  <form id="symptomForm" th:action="@{/symptoms}" th:object="${symptoms}" method="post">
+    <div class="form-group">
+      <label>Select Symptoms:</label><br>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="dizziness" name="symptoms" value="Dizziness">
+        <label class="form-check-label" for="dizziness">Dizziness</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="flow" name="symptoms" value="Flow">
+        <label class="form-check-label" for="flow">Flow</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="hecticFever" name="symptoms" value="Hectic Fever">
+        <label class="form-check-label" for="hecticFever">Hectic Fever</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="hunger" name="symptoms" value="Hunger">
+        <label class="form-check-label" for="hunger">Hunger</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="irritability" name="symptoms" value="Irritability">
+        <label class="form-check-label" for="irritability">Irritability</label>
+      </div>
+
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="abdominalCramps" name="symptoms" value="Abdominal-Cramps">
+        <label class="form-check-label" for="abdominalCramps">Hunger</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="backaches" name="symptoms" value="Backaches">
+        <label class="form-check-label" for="backaches">Hunger</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="bloating" name="symptoms" value="Bloating ">
+        <label class="form-check-label" for="bloating">Hunger</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="insomnia" name="symptoms" value="Insomnia">
+        <label class="form-check-label" for="insomnia">Hunger</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="migraines" name="symptoms" value="Migraines">
+        <label class="form-check-label" for="migraines">Hunger</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="musclePain" name="symptoms" value="Muscle-Pain ">
+        <label class="form-check-label" for="musclePain">Hunger</label>
+      </div>
+
+
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</body>
+</html>

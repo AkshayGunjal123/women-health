@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker Records</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Add any additional CSS styling as needed -->
+    <script th:src="@{/js/javascript.js}"></script>
+
+</head>
+<body>
+
+<div th:fragment="tracker-record" class="container">
+
+    <h2>Tracker Records</h2>
+    <div class="table-responsive">
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Cycle</th>
+                <th>Period Start Date</th>
+                <th>Period End Date</th>
+                <th>Next Period Prediction Date</th>
+                <th>Fertility Start Date</th>
+                <th>Ovulation Date</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Iterate over each cycle record and display its details -->
+            <tr th:each="cycle, cycleNumber : ${cyclesRecord}">
+                <!-- Initialize the cycle number -->
+                <th:block th:with="cycleNumber= ${cycleNumber.index + 1}">
+
+                    <!-- Display the cycle number -->
+                    <td th:text="'Cycle-' + ${cycleNumber}"></td>
+
+
+                    <td th:text="${cycle.periodStartDate}"></td>
+                    <td th:text="${cycle.periodEndDate}"></td>
+                    <td th:text="${cycle.nextPeriodPredictionDate}"></td>
+                    <td th:text="${cycle.fertilityStartDate}"></td>
+                    <td th:text="${cycle.ovulationDate}"></td>
+
+                </th:block>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+</body>
+</html>

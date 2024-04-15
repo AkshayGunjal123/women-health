@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/indexstyle.css}">
+</head>
+<body>
+
+<header>
+    <h1>Women's Health</h1>
+    <p>Your source for health and wellness</p>
+
+    <nav>
+        <a href="#" onclick="loadContent('welcome')">Home</a>
+        <a href="#" onclick="loadContent('signin')">Sign In</a>
+        <a href="#" onclick="loadContent('signup')">Sign Up</a>
+        <a href="#" onclick="loadContent('healthinfo')">Health Info</a>
+    </nav>
+
+</header>
+
+<div class="container" id="main-content">
+    <section>
+        <h2>Welcome to Women's Health</h2>
+        <p>Explore our resources and information to empower women in their health and wellness journey.</p>
+
+    </section>
+
+    <section>
+        <h2>Featured Articles</h2>
+        <p>Discover the latest articles on women's health topics, including nutrition, fitness, mental health, and more.</p>
+        <!-- Add your featured articles or content here -->
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Women's Health. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script th:src="@{/js/loadcontent.js}"></script>
+
+</body>
+</html>
