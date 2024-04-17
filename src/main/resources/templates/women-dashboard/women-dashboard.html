@@ -29,6 +29,7 @@
 
         <a href="#" class="dashboard-button" onclick="doctorAppointment()">Appointment</a>
         <a href="#" class="dashboard-button" onclick="appointmentRecord()">View Appointment</a>
+        <a href="#" class="dashboard-button" onclick="healthInfo()">Health info</a>
         <a th:href="@{/logout}" class="fas fa-sign-out">
         </a>
     </nav>
@@ -69,6 +70,8 @@
     <div th:include="women-dashboard/view-symptoms :: view-symptoms" class="view-symptoms" style="display:none;" ></div>
 
     <div th:include="women-dashboard/appointment-record :: appointment-record" class="appointment-record" style="display:none;" ></div>
+
+    <div th:include="women-dashboard/health-info :: health-info" class="health-info" style="display:none;" ></div>
 
 </div>
 

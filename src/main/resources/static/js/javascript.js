@@ -15,6 +15,7 @@ function toggleTracker() {
          $('.tracker-record').hide();
          $('.view-symptoms').hide();
          $('.appointment-record').hide();
+         $('.health-info').hide();
     });
 }
 
@@ -33,6 +34,7 @@ function toggleTrackerRecord(){
              $('.women-symptoms').hide();
              $('.view-symptoms').hide();
              $('.appointment-record').hide();
+             $('.health-info').hide();
         });
 
 }
@@ -50,6 +52,7 @@ function womenSymptoms() {
             $(".temp").hide();
             $('.view-symptoms').hide();
             $('.appointment-record').hide();
+            $('.health-info').hide();
         });
 }
 
@@ -66,6 +69,7 @@ function doctorAppointment() {
             $(".temp").hide();
             $('.view-symptoms').hide();
             $('.appointment-record').hide();
+            $('.health-info').hide();
         });
 }
 
@@ -85,6 +89,7 @@ function viewSymptoms() {
             $('.tracker-temp').hide();
             $(".temp").hide();
             $('.appointment-record').hide();
+            $('.health-info').hide();
         });
 }
 
@@ -104,7 +109,23 @@ function appointmentRecord() {
             $('.tracker-record').hide();
             $('.tracker-temp').hide();
             $(".temp").hide();
+            $('.health-info').hide();
         });
+}
+
+function healthInfo(){
+
+            $('.health-info').show();
+            $('.tracker-record').hide(); // Show the tracker content
+            // Optionally, you can hide other dashboard content here
+            $('.doctor-appointment').hide();
+             $(".temp").hide();
+             $('.tracker-temp').hide();
+             $('.women-symptoms').hide();
+             $('.view-symptoms').hide();
+             $('.appointment-record').hide();
+
+
 }
 
 
